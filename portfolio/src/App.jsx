@@ -7,6 +7,8 @@ import Projects from './pages/projects'
 import About from './pages/about'
 import Home from './pages/home'
 import Contact from './pages/contact'
+import Header from './common/header';
+
 
 
 function App() {
@@ -14,17 +16,9 @@ function App() {
 
   return (
     <Router>
-      <nav>
-        <ul>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/about">Contact</Link></li>
-          <li><Link to="/projects">Contact</Link></li>
-
-        </ul>
-      </nav>
+      <Header />
      <Routes>
-     <Route path = "/home" element={<Home/>} />
+     <Route path = "/" element={<Home/>} />
      <Route path = "/projects" element={<Projects/>}  />
      <Route path = "/about" element={<About/>}  />
      <Route path = "/contact" element={<Contact/>}/>
